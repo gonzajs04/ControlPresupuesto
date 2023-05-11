@@ -1,0 +1,430 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+
+}
+
+#root{
+  height: 100%;
+}
+.App{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+}
+
+
+/*HEADER*/
+
+.header{
+  background-color: #646cff;
+ height: 250px;
+  text-align: center;
+  width: 100%;
+  
+}
+
+
+/*CONTAINER HEADER- AGREGAR PRESUPUESTO*/
+.container-h-ap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+}
+
+
+/*FORM AGREGAR PRESUPUESTO*/
+
+.container-form{
+  background-color: rgb(16, 16, 16);
+  border-radius: 10px;
+  width: 700px;
+  height: 280px;
+  margin-top: -10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.agregar-presupuesto{
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 85%;
+  
+}
+.agregar-presupuesto label{
+  display: block;
+  font-size: 20px;
+  text-transform: capitalize;
+
+  
+}
+.agregar-presupuesto input{
+  text-align: center;
+  height: 30px;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.agregar-presupuesto input[type="number"]{
+
+  background-color: #1a1a1a;
+  margin: 1rem 0;
+  border-color: rgba(16, 16, 16, 0)
+
+
+}
+.agregar-presupuesto input[type="submit"]{
+  background-color:#535bf2 ;
+
+  outline: none;
+  border: 0px;
+}
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+
+/*ALERTA CSSS*/
+
+.alerta{
+  color: white;
+  background-color: rgba(208, 208, 208, 0.01);
+  font-size: 14px;
+}
+.error{
+  color: red;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  border-left: 4px solid red;
+  width: 100%;
+  padding: .5rem 0;
+
+}
+
+/*PLANIFICADOR PRESUPUESTO*/
+.containerg-planificador{
+  background-color: #1a1a1a;
+  width: 700px;
+  height: 280px;
+  margin-top: -10rem;
+  border-radius: 8px;
+}
+.container-planificador{
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  place-items: center;
+  height: 100%;
+ 
+}
+
+.btn-restart{
+  background-color: rgb(255, 0, 51);
+  border: 1px solid  rgb(255, 0, 51);
+  outline: none;
+  border-radius: 8px;
+  width: 100%;
+  height: 35px;
+  
+}
+.btn-restart:hover{
+  cursor: pointer;
+}
+.texto-planificador{
+  width: 100%;
+}
+.texto-planificador p{
+  font-size: 17px;
+}
+
+.texto-planificador p span{
+  color: #646cff;
+  font-weight: 600;
+}
+
+/*ICONO NUEVO GAST*/
+.nuevo-gasto{
+ width: 100%;
+  display: block;
+position: relative;
+opacity: .6;
+
+transition: .5s opacity ease-in-out;
+
+}
+.nuevo-gasto:hover{
+  opacity: 1;
+}
+.nuevo-gasto img{
+  width: 45px;
+  position: absolute;
+  right: 3%;
+  bottom: 60%;
+  height: 40px;
+
+}
+.nuevo-gasto img:hover{
+  cursor: pointer;
+
+  
+}
+
+/*MODALLLL*/
+
+.modal{
+  z-index: 1000;
+  position: relative;
+  background-color: #000000f0;
+  height: 100%;
+  width: 100%;
+
+}
+
+
+
+/*CERRAR MODAL*/
+
+.cerrar-modal {
+  width: 25px;
+  position: absolute;
+  right: 2%;
+  top: 3%;
+}
+.cerrar-modal:hover{
+  cursor: pointer;
+}
+
+
+
+.formulario{
+
+  transition: opacity .5s ease-in-out;
+  opacity: 0;
+}
+
+.animar{
+  opacity: 1 !important;
+}
+
+.cerrar{
+  opacity: 0 !important;
+}
+
+.container-modal{
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.formulario{
+  width: 400px;
+}
+
+.formulario legend{
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 3px solid #535bf2;
+}
+.formulario label{
+  margin: 1rem 0;
+  display: block;
+  font-size: 20px;
+
+}
+
+.formulario select{
+  width: 100%;
+  height: 40px;
+}
+
+.formulario input{
+  border: none;
+outline: none;
+height: 40px;
+width: 100%;
+}
+
+.btn-añadir{
+  margin: 2rem 0;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  background-color: #535bf2;
+}
+
+
+.gastos{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.gastos div p{
+  color: white;
+}
+.gastos h2{
+  text-align: center;
+}
+
+.gastos div p{
+  margin: .5rem 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+.gasto{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(14, 14, 14);
+}
+
+.contenido-gasto{
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-evenly;
+
+ 
+}
+.contenido-gasto img{
+   width: 100px; 
+
+   margin: 0 2rem;
+}
+.sombra{
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+}
+.descripcion-gasto{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
+}
+
+.nombre-gasto{
+  font-size: 1.5rem !important;
+  text-transform: capitalize !important;
+}
+
+.fecha span{
+  color: #a0a0a0;
+}
+
+.categoria{
+  color: #b3b3b3 !important;
+
+
+}
+.cantidad-gasto{
+  margin: 0 3rem !important;
+  font-weight: 800 !important;
+  font-size: 20px !important;
+}
+
+
+
+.swipe-action__leading{
+  background-color: rgb(25, 131, 241) ;
+  color: white;
+
+}
+
+.swipe-action__trailing{
+  background-color: #db2777;
+
+  color: white;
+}
+.swipeable-list .swipe-action{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.circular-progress{
+  width: 220px;
+}
+
+.container-filtros{
+  margin: 2rem 0;
+  padding: 1rem 0;
+  background-color: rgb(14, 14, 14);
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 15px;
+}
+.container-filtros form{
+ 
+  text-align: center;
+}
+.campo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.campo label{
+  
+  font-size: 1.3rem;
+  margin: 1rem 2rem;
+  font-weight: 700;
+
+}
+.campo select{
+  width: 500px;
+  padding: .5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.negativo{
+  color: #DC2626 !important;
+}
